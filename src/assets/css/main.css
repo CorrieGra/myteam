@@ -1,0 +1,132 @@
+:root {
+    --color-primary-cyan: #024D58;
+    --color-secondary-cyan: #0B4047;
+    --color-neutral-pink: #F67E7F;
+    --color-neutral-cyan: #79C8C7;
+}
+
+*,
+*::before,
+*::after,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+body {
+    color: #ffffff;
+    background-color: var(--color-primary-cyan);
+}
+
+@import './partials/utils';
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    width: 100vw;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 1.25rem 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+
+nav>.nav--left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+nav>.nav--right {
+    justify-self: flex-end;
+}
+
+section {
+    position: relative;
+    padding: 5rem 0 10rem 0;
+}
+
+section:nth-child(1) {
+    background-color: var(--color-secondary-cyan);
+}
+
+#section--hero::before {
+    position: absolute;
+    content: url('../images/bg-pattern-home-1.svg');
+    top: 40%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#section--hero::after {
+    position: absolute;
+    content: url('../images/bg-pattern-home-2.svg');
+    bottom: -12%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+}
+
+.hero>.hero--title h1 {
+    max-width: 80%;
+    font-size: 5rem;
+}
+
+.hero>.hero--text {
+    position: relative;
+}
+
+.hero>.hero--text::before {
+    position: absolute;
+    content: '';
+    top: -5rem;
+    left: .75rem;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-neutral-cyan);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.hero>.hero--text p {
+    max-width: 40ch;
+    width: 100%;
+    line-height: 1.4;
+}
