@@ -1,0 +1,59 @@
+#section--hero::before {
+    position: absolute;
+    content: url('../../images/bg-pattern-home-1.svg');
+    top: 40%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#section--hero::after {
+    position: absolute;
+    content: url('../../images/bg-pattern-home-2.svg');
+    bottom: -12%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    align-items: flex-end;
+}
+
+.hero>.hero--title h1 {
+    max-width: 100%;
+}
+
+.hero>.hero--text {
+    position: relative;
+}
+
+.hero>.hero--text::before {
+    position: absolute;
+    content: '';
+    top: -5rem;
+    left: .75rem;
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-neutral-cyan);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.hero>.hero--text p {
+    max-width: 40ch;
+    width: 100%;
+    line-height: 1.4;
+}
